@@ -101,4 +101,19 @@ client.on('voiceStateUpdate', (oldState, newState) => {
   return client.voiceStateUpdater.handleUpdate(oldState, newState);
 });
 
+client.on('guildMemberAdd', async member => {
+  if (member.guild.id !== "836949343138742282") return;
+  const channel = member.guild.channels.cache.get("836949346289188955");
+  if (channel?.isText()) {
+    const wmsg = [
+      `**${member.user.tag}** has joined the server.`,
+      `**${member.user.tag}** just joined, please serve a tea 🍵`,
+      `Welcome **${member.user.tag}**, nice to meet you.`,
+      `It seems that **${member.user.tag}** has joined our capital.`,
+      `Someone j-just joined, please welcome **${member.user.tag}**`
+    ];
+    await channel.send(wmsg[Math.floor(Math.random() * wmsg.length)]);
+  }
+});
+
 client.login(config.get('TOKEN'));
