@@ -35,9 +35,6 @@ class HelpCommand extends Command {
       const field = fields[key];
       embed.addField(field.title, field.text);
     }
-
-    embed.addField('Found a bug?', `This bot is far from perfect, so in case you found a bug, please report it [here](${MESSAGE_EMBED.issuesURL}).`);
-
     return message.channel.send(embed);
   }
 }
