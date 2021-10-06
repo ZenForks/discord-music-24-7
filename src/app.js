@@ -103,7 +103,7 @@ client.on('voiceStateUpdate', (oldState, newState) => {
 
 client.on('guildMemberAdd', async member => {
   if (member.guild.id !== "836949343138742282") return;
-  const channel = member.guild.channels.cache.get("836949346289188955");
+  const channel = member.guild.channels.cache.get("894721920052887602");
   if (channel?.isText()) {
     const wmsg = [
       `**${member.toString()}** has joined the server.`,
