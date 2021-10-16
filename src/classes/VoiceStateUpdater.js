@@ -37,7 +37,7 @@ class VoiceStateUpdater {
 
   _handleMemberJoinedChannel(member) {
     logger.info(`User ${member.displayName} has joined ${this.client.player.channel.name}.`);
-    const channel = this.client.channels.cache.get("886833894488440832");
+    const channel = this.client.channels.cache.get("894722037581496422");
     if (channel?.isText()) {
       channel.send(`Welcome ${member.toString()} to MTLNovel Coffee. Enjoy your time!`)
     }
